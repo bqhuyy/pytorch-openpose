@@ -115,6 +115,8 @@ class Body(object):
                     for j in range(nB):
                         vec = np.subtract(candB[j][:2], candA[i][:2])
                         norm = math.sqrt(vec[0] * vec[0] + vec[1] * vec[1])
+                        if not norm:
+                            norm = 1
                         vec = np.divide(vec, norm)
 
                         startend = list(zip(np.linspace(candA[i][0], candB[j][0], num=mid_num), \
@@ -207,7 +209,7 @@ class Body(object):
 
 if __name__ == "__main__":
     body_estimation = Body('../model/body_pose_model.pth')
-
+ 
     test_image = '../images/ski.jpg'
     oriImg = cv2.imread(test_image)  # B,G,R order
     candidate, subset = body_estimation(oriImg)
