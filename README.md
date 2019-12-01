@@ -21,6 +21,8 @@ Don't be mean to star this repo if it helps your research.
 
 `*.pth` files are pytorch model, you could also download caffemodel file if you want to use caffe as backend.
 
+Store them in `/model/`
+
 ## Installation
 ```
 pip install -r requirements.txt
