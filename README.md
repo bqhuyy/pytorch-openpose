@@ -1,4 +1,4 @@
-## pytorch-openpose
+# [pytorch-openpose](https://github.com/Hzzone/pytorch-openpose)
 
 pytorch implementation of [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) including **Body and Hand Pose Estimation**, and the pytorch model is directly converted from [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) caffemodel by [caffemodel2pytorch](https://github.com/vadimkantorov/caffemodel2pytorch). You could implement face keypoint detection in the same way if you are interested in. Pay attention to that the face keypoint detector was trained using the procedure described in [Simon et al. 2017] for hands.
 
@@ -16,33 +16,47 @@ If anybody wants a pure python wrapper, please refer to my [pytorch implementati
 
 Don't be mean to star this repo if it helps your research.
 
-### Model Download
+## Model Download
 * [dropbox](https://www.dropbox.com/sh/7xbup2qsn7vvjxo/AABWFksdlgOMXR_r5v3RwKRYa?dl=0)
 
 `*.pth` files are pytorch model, you could also download caffemodel file if you want to use caffe as backend.
 
-### Todo list
+## Installation
+```
+pip install -r requirements.txt
+```
+[Pytorch](https://pytorch.org/)
+
+## Todo list
 - [x] convert caffemodel to pytorch.
 - [x] Body Pose Estimation.
 - [x] Hand Pose Estimation.
+- [ ] Face Estimation.
+- [ ] Foot Pose Estimation.
 - [ ] Performance test.
 - [ ] Speed up.
 
-### Demo
-#### Skeleton
+## Demo
+* demo_image
+* demo_video
+* demo_camera
+### Skeleton
 
 ![](images/skeleton.jpg)
-#### Body Pose Estimation
+### Body Pose Estimation
 
 ![](images/body_preview.jpg)
 
-#### Hand Pose Estimation
+### Hand Pose Estimation
 ![](images/hand_preview.png)
 
-#### Body + Hand
+### Body + Hand
 ![](images/demo_preview.png)
 
-### Citation
+### Video
+![](images/video_demo.gif)
+
+## Citation
 Please cite these papers in your publications if it helps your research (the face keypoint detector was trained using the procedure described in [Simon et al. 2017] for hands):
 
 ```
